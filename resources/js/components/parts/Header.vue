@@ -52,11 +52,20 @@ export default {
 
 <style lang="scss" scoped>
 @import url('https://fonts.googleapis.com/css2?family=Gemunu+Libre:wght@800&display=swap');
+@mixin mobile {
+  @media screen and (max-width: 767px) {
+    @content
+  }
+}
 
 .header {
   width: 100%;
   padding: 25px 50px;
-  background-color: rgb(255, 236, 153);
+  background-color: $color;
+
+  @include mobile {
+    padding: 15px 15px;
+  }
   &_wrapper {
     display: flex;
     justify-content: space-between;
@@ -71,14 +80,17 @@ export default {
     font-weight: 500;
     letter-spacing: .05em;
     font-family: 'Gemunu Libre', sans-serif;
-  }
-  &_menu { 
-    position: relative;
+
+    @include mobile {
+      font-size: 3vw;
+      padding: 10px 5px;
+    }
   }
   &_hamburger {
     width: 30px;
     display: flex;
     flex-direction: column;
+
     span {
       transition: all .5s;
       width: 100%;
@@ -110,20 +122,30 @@ export default {
     top: 61px;
     right: 0;
     background-color: rgb(255, 250, 228);
+    @include mobile {
+      width: 40vw;
+    }
   }
   &_nav {
     padding: 30px 40px;
     margin: 0;
+    @include mobile {
+      padding: 20px 30px;
+    }
     &_item {
       list-style: none;
       &:nth-child(n+2) {
         margin-top: 25px;
       }
       button {
+        cursor: pointer;
         border: none;
         font-size: 18px;
         background-color: transparent;
         transition: opacity .3s;
+        @include mobile {
+          font-size: 2vw;
+        }
         &:hover {
           opacity: .5;
         }
