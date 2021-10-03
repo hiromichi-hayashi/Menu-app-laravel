@@ -61,7 +61,7 @@ export default {
 .header {
   width: 100%;
   padding: 25px 50px;
-  background-color: $color;
+  background-color: rgb(241, 225, 80);
 
   @include mobile {
     padding: 15px 15px;
