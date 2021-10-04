@@ -1,6 +1,6 @@
 <template>
   <div class="app">
-    <Header></Header>
+    <Header class="no_flex"></Header>
     <slot></slot>
   </div>
 </template>
@@ -16,5 +16,4 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-
 </style>
