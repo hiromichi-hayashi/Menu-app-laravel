@@ -62,6 +62,7 @@ export default {
   width: 100%;
   padding: 25px 50px;
   background-color: rgb(241, 225, 80);
+  position: relative;
 
   @include mobile {
     padding: 15px 15px;
@@ -119,7 +120,7 @@ export default {
   &_contents {
     width: 300px;
     position: absolute;
-    top: 61px;
+    top: 100%;
     right: 0;
     background-color: rgb(255, 250, 228);
     @include mobile {
